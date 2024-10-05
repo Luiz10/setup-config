@@ -1,0 +1,17 @@
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "health"
+eureka:
+  instance:
+    hostname: host.docker.internal
+    ip-address: "*"
+  client:
+    service-url:
+      defaultZone: http://host.docker.internal:8761/registry/eureka

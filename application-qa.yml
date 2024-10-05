@@ -1,0 +1,16 @@
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "health"
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://host.docker.internal:8761/eureka
