@@ -10,8 +10,8 @@ management:
           - "health"
 eureka:
   instance:
-    hostname: host.docker.internal
+    hostname: localhost
     ip-address: "*"
   client:
     service-url:
-      defaultZone: http://host.docker.internal:8761/registry/eureka
+      defaultZone: http://localhost:8761/registry/eureka
